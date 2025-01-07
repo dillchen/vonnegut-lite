@@ -7,11 +7,22 @@ A lightweight version of Vonnegut that uses Cursor's AI capabilities to help wri
 
 [Watch Kurt Vonnegut on the "Shape of Stories" on YouTube](https://www.youtube.com/watch?v=GOGru_4z1Vc)
 
-Based on Vonnegut’s observation, and leveraging this project's prompt flow, we can start from a simple story seed and systematically build out a fully fleshed novel—one chapter at a time.
+Based on Vonnegut's observation, and leveraging this project's prompt flow, we can start from a simple story seed and systematically build out a fully fleshed novel—one chapter at a time.
 
 ## Quick Start with Cursor
 
-1. Open Cursor and enable features:
+1. **Get the Starter Repo**:
+```bash
+# Fork this repo on GitHub, then clone to your desktop
+git clone https://github.com/YOUR_USERNAME/vonnegut-lite.git
+cd vonnegut-lite
+
+# Or clone directly (if you don't plan to contribute back)
+git clone https://github.com/commonxyz/vonnegut-lite.git
+cd vonnegut-lite
+```
+
+2. **Enable Cursor Features**:
 ```bash
 # Open Cursor's Command Palette
 Cmd/Ctrl + Shift + P
@@ -23,7 +34,7 @@ Type: "Enable Composer Mode (with Agentic Mode)"
 Type: "(Optional) Enable Yolo Mode"
 ```
 
-2. Let Cursor set up your novel:
+3. **Initialize Your Novel**:
 ```bash
 # Copy this into Cursor's Composer:
 "Create a new novel project with the following:
