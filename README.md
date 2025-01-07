@@ -26,6 +26,66 @@ Type: "(Optional) Enable Yolo Mode"
 - Prepare the first chapter structure"
 ```
 
+## Prompt Flow Loop
+
+The writing process follows a cyclical pattern of prompts, each building upon the previous step:
+
+1. **Expand** (Run Once)
+   - Initial story expansion
+   - Develop core concepts
+   - Create detailed character profiles
+   - Build world and setting details
+   - Set up story structure
+
+2. **Plan** (Each Writing Session)
+   - Review previous content
+   - Outline next scene/chapter
+   - Set specific goals
+   - Identify key story beats
+
+3. **Research** (Optional)
+   - Gather necessary background information
+   - Verify technical details
+   - Study similar works for inspiration
+   - Document findings for reference
+
+4. **Act**
+   - Write character dialogue
+   - Create scene descriptions
+   - Develop action sequences
+   - Build emotional moments
+
+5. **Draft**
+   - Combine scene elements
+   - Write connecting passages
+   - Add descriptive details
+   - Ensure flow and pacing
+
+6. **Critique**
+   - Review for consistency
+   - Check character voices
+   - Analyze pacing
+   - Identify weak points
+   - Suggest improvements
+
+7. **Revise**
+   - Address critique points
+   - Strengthen weak areas
+   - Polish prose
+   - Enhance descriptions
+   - Tighten dialogue
+
+Return to Step 2 (Plan) for the next scene/chapter.
+
+### Using the Loop
+
+- Start each writing session at Step 2 (Plan)
+- Complete steps 2-7 for each scene/chapter
+- Use Research (Step 3) as needed
+- Track progress in checklist.json
+- Save work after each step
+- Review previous work before planning next section
+
 ## Manual Setup (Alternative)
 
 If you prefer to set up manually, run these commands:
