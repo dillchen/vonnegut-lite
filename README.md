@@ -2,6 +2,13 @@
 
 A lightweight version of Vonnegut that uses Cursor's AI capabilities to help write your novel. This version doesn't require any dependencies or setup - just Cursor and these prompts.
 
+> "There is no reason why the simple shapes of stories can't be fed into computers. They are beautiful shapes."  
+> -- Kurt Vonnegut
+
+[Watch Kurt Vonnegut on the "Shape of Stories" on YouTube](https://www.youtube.com/watch?v=GOGru_4z1Vc)
+
+Based on Vonnegut’s observation, and leveraging this project's prompt flow, we can start from a simple story seed and systematically build out a fully fleshed novel—one chapter at a time.
+
 ## Quick Start with Cursor
 
 1. Open Cursor and enable features:
