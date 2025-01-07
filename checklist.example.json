@@ -1,0 +1,65 @@
+{
+  "items": {
+    "background.expand": {
+      "task": "Generate initial story expansion",
+      "completed": false,
+      "scope": "background",
+      "dependencies": [],
+      "timestamp": null
+    },
+    "chapter-1.plan": {
+      "task": "Execute plan",
+      "completed": false,
+      "scope": "chapter-1", 
+      "dependencies": ["background.expand"],
+      "timestamp": null
+    },
+    "chapter-1.research": {
+      "task": "Execute research",
+      "completed": false,
+      "scope": "chapter-1",
+      "dependencies": ["chapter-1.plan"],
+      "timestamp": null
+    },
+    "chapter-1.act": {
+      "task": "Execute act",
+      "completed": false,
+      "scope": "chapter-1",
+      "dependencies": ["chapter-1.research"],
+      "timestamp": null
+    },
+    "chapter-1.draft": {
+      "task": "Execute draft",
+      "completed": false,
+      "scope": "chapter-1",
+      "dependencies": ["chapter-1.act"],
+      "timestamp": null
+    },
+    "chapter-1.critique": {
+      "task": "Execute critique",
+      "completed": false,
+      "scope": "chapter-1",
+      "dependencies": ["chapter-1.draft"],
+      "timestamp": null
+    },
+    "chapter-1.revise": {
+      "task": "Execute revise",
+      "completed": false,
+      "scope": "chapter-1",
+      "dependencies": ["chapter-1.critique"],
+      "timestamp": null
+    },
+    "chapter-2.plan": {
+      "task": "Execute plan",
+      "completed": false,
+      "scope": "chapter-2",
+      "dependencies": ["chapter-1.revise"],
+      "timestamp": null
+    }
+  },
+  "metadata": {
+    "currentChapter": 1,
+    "lastUpdated": null,
+    "version": "1.0.0"
+  }
+} 

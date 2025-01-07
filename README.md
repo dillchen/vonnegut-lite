@@ -2,39 +2,112 @@
 
 A lightweight version of Vonnegut that uses Cursor's AI capabilities to help write your novel. This version doesn't require any dependencies or setup - just Cursor and these prompts.
 
-## Getting Started
+## Quick Start with Cursor
 
-1. Create a new directory for your novel
-2. Copy this entire `/lite` directory into it
-3. Create a `story-seed.json` file based on `seed.example.json`
-4. Create the following directory structure:
-```
-your-novel/
-├── Background/          # Story background and metadata
-├── Chapter-1/          # First chapter
-│   ├── scenes/         # Scene files
-│   ├── drafts/         # Draft files
-│   ├── critiques/      # Critique files
-│   └───| additions/      # New story elements
-│       ├── characters/ # New characters
-│       ├── settings/   # New locations
-│       └── plot-points/# New plot elements
-└── lite/               # This directory
-    └── prompts/        # AI prompts for each step
+1. Open Cursor and enable features:
+```bash
+# Open Cursor's Command Palette
+Cmd/Ctrl + Shift + P
+
+# Enable Composer Mode
+Type: "Enable Composer Mode (with Agentic Mode)"
+
+# (Optional) Enable Yolo Mode for more direct file creation
+Type: "(Optional) Enable Yolo Mode"
 ```
 
-## How to Use
+2. Let Cursor set up your novel:
+```bash
+# Copy this into Cursor's Composer:
+"Create a new novel project with the following:
+- Create a 'novel' directory
+- Set up all required subdirectories
+- Initialize story-seed.json and checklist.json from examples
+- Prepare the first chapter structure"
+```
 
-Each command from the original Vonnegut has been converted to a markdown file in the `prompts` directory. To use them:
+## Manual Setup (Alternative)
 
-1. Open the relevant prompt file in Cursor
-2. Follow the instructions at the top of the file
-3. Use Cursor's AI to execute the prompts against your content
-4. Save the generated content in the appropriate directory
+If you prefer to set up manually, run these commands:
+```bash
+# Create project structure
+mkdir novel
+cd novel
+
+# Create required directories
+mkdir -p background/research
+mkdir -p chapter-1/{scenes,drafts,critiques}
+mkdir -p chapter-1/additions/{characters,settings,plot-points}
+
+# Initialize tracking files
+cp ../seed.example.json story-seed.json
+cp ../checklist.example.json checklist.json
+```
+
+Your directory structure should look like this:
+```
+.                      # Root directory
+├── prompts/          # AI prompts directory
+│   ├── act.md
+│   ├── critique.md
+│   ├── draft.md
+│   ├── plan.md
+│   ├── research.md
+│   └── revise.md
+├── novel/            # Your novel directory
+│   ├── background/   # Story background and metadata
+│   │   └── research/# Research documents
+│   ├── chapter-1/   # First chapter
+│   │   ├── scenes/  # Scene files
+│   │   ├── drafts/  # Draft files
+│   │   ├── critiques/ # Critique files
+│   │   └── additions/ # New story elements
+│   │       ├── characters/
+│   │       ├── settings/
+│   │       └── plot-points/
+│   ├── story-seed.json  # Story configuration
+│   └── checklist.json   # Progress tracking
+├── seed.example.json    # Template for story-seed.json
+└── checklist.example.json # Template for checklist.json
+```
+
+## Instructions for Cursor Composer
+
+1. Navigate to your project:
+```bash
+cd novel
+```
+
+2. Use Composer (Cmd/Ctrl + Shift + P) to:
+   - Generate content based on prompts
+   - Analyze existing content
+   - Track progress through checklist
+   - Manage file creation
+
+3. For each prompt file:
+   - Open the relevant `.md` file from `../prompts/`
+   - Select the appropriate prompt section
+   - Use Composer to execute the prompt
+   - Save generated content in the correct directory:
+     ```bash
+     # Example: Creating a new scene
+     touch chapter-1/scenes/scene-1.md
+     
+     # Example: Creating a draft
+     touch chapter-1/drafts/draft-1.md
+     ```
+
+4. Track Progress:
+   ```bash
+   # Open checklist in Cursor
+   open checklist.json
+   
+   # Update task status and timestamp when complete
+   ```
 
 ### Command Order
 
-Typical workflow for each chapter:
+The `checklist.json` file enforces this workflow for each chapter:
 
 1. `plan.md` - Plan the chapter structure
 2. `research.md` - Generate background information
@@ -150,4 +223,24 @@ If Cursor's AI gives unexpected results:
 
 ## Contributing
 
-Feel free to improve these prompts and share your experiences. Create issues or pull requests on the GitHub repository. 
+Feel free to improve these prompts and share your experiences. Create issues or pull requests on the GitHub repository.
+
+## Using the Checklist
+
+The `checklist.example.json` file provides a template for tracking progress:
+
+1. **Structure**
+   - Tasks are grouped by scope (background, chapter-N)
+   - Each task has dependencies and completion status
+   - Timestamps track when tasks are completed
+
+2. **Task Flow**
+   - Complete tasks in dependency order
+   - Mark tasks complete in checklist
+   - Use timestamps for progress tracking
+
+3. **Managing with Cursor**
+   - Open checklist.json in Cursor
+   - Update status as tasks complete
+   - Use Composer to validate progress
+   - Track dependencies automatically 
